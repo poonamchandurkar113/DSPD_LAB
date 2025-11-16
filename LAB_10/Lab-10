@@ -1,0 +1,28 @@
+//Poonam_Chandurkar  Roll_No:-B113  Sem-3rd
+
+/*AIM: 10	Write a C program (name it "filecopy. c")  that copies the 
+contents of one file to a destination file. This program will read data 
+from one file and copy them to another. The first input that the program will
+ need is the names of the two files: input file ("input.txt") and output file ("output.txt"). 
+ Once the two file names have been obtained, the program must open the input file and create 
+ and open the output file.*/
+
+#include <stdio.h>
+int main() {
+    FILE *f1,*f2;
+    char ch;
+    f1=fopen("input.txt","r");
+f2= fopen("output. trit", "w");
+if (f1 == NULL){
+    printf("Poonam Chandurkar Roll no:-B113 sem-3rd\n");
+printf ("Error : input.tnt file does not exist.\n");
+return 1;
+}
+while ((ch=fgetc(f1)) != EOF) {
+fputc (ch, f2);
+}
+printf( "file copied successfully .\n");
+fclose (f1); 
+fclose(f2);
+return 0;
+}
